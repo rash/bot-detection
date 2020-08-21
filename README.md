@@ -12,7 +12,7 @@ Bot detection has always been a cat and mouse game. Whether it's preventing bots
  - Input Analysis
 
 # User Agents
-A user agent is a header sent by the client to the server that allows the server to identify specific attributes about the client that sent the request. Some bots do not attempt to spoof this header, allowing for a simple detection vector.
+A user agent is a header sent by the client to the server that allows the server to identify specific attributes about the client that sent the request. Some bots do not attempt to spoof this header and instead outright identify themselves, allowing for a simple detection vector.
 
 ### Pros
 
