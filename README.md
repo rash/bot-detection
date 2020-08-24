@@ -4,7 +4,7 @@ Bot detection has always been a cat and mouse game. Whether it's preventing bots
 # Detection Methods
 
  - [User Agents](#user-agents)
- - Logic Checks
+ - [Logic Checks](#logic-checks)
  - Cookie Support
  - JavaScript Support
  - Spoofing Detection
