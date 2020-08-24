@@ -22,3 +22,15 @@ A user agent is a header sent by the client to the server that allows the server
 ### Cons
 
  - Trivial to get around, as this header can be modified
+
+# Logic Checks
+Logic checks generally check the behaviour of visitors and check if they exceed a threshold that only bots could reach. An example of such a check would be checking how many pages a visitor attempts to go to in a period of time.
+
+### Pros
+
+ - Imposes a limit on what bots can do
+ - Forces bots to adapt if they desire to circumvent this measure
+
+### Cons
+
+ - Can accidentally be triggered by legitimate visitors if thresholds are too low
