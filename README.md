@@ -40,9 +40,7 @@ A cookie is data kept on a computer by a web browser that websites can view. Som
 
 ### Pros
 
- - Hard for legitimate visitors to accidentially trigger32
-
- - Forces bots to adapt if they desire to circumvent this measure
+ - Hard for legitimate visitors to accidentially trigger
  - Protects against basic bots
  
  ### Cons
