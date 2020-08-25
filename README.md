@@ -5,7 +5,7 @@ Bot detection has always been a cat and mouse game. Whether it's preventing bots
 
  - [User Agents](#user-agents)
  - [Logic Checks](#logic-checks)
- - Cookie Support
+ - [Cookie Support](#cookie-support)
  - JavaScript Support
  - Spoofing Detection
  - Variable Detection
@@ -34,3 +34,17 @@ Logic checks generally check the behaviour of visitors and check if they exceed 
 ### Cons
 
  - Can accidentally be triggered by legitimate visitors if thresholds are too low
+
+# Cookie Support
+A cookie is data kept on a computer by a web browser that websites can view. Some bots do not support cookies, providing a detection vector.
+
+### Pros
+
+ - Hard for legitimate visitors to accidentially trigger32
+
+ - Forces bots to adapt if they desire to circumvent this measure
+ - Protects against basic bots
+ 
+ ### Cons
+ 
+  - More advanced bots support cookies, allowing them to get around this detection vector
