@@ -6,7 +6,7 @@ Bot detection has always been a cat and mouse game. Whether it's preventing bots
  - [User Agents](#user-agents)
  - [Logic Checks](#logic-checks)
  - [Cookie Support](#cookie-support)
- - JavaScript Support
+ - [JavaScript Support](#javascript-support)
  - Spoofing Detection
  - Variable Detection
  - Input Analysis
@@ -29,7 +29,7 @@ Logic checks generally check the behaviour of visitors and check if they exceed 
 ### Pros
 
  - Imposes a limit on what bots can do
- - Forces bots to adapt if they desire to circumvent this measure
+ - Forces bots to adapt if they desire to get around this detection vector
 
 ### Cons
 
@@ -43,6 +43,18 @@ A cookie is data kept on a computer by a web browser that websites can view. Som
  - Hard for legitimate visitors to accidentially trigger
  - Protects against basic bots
  
- ### Cons
+### Cons
  
-  - More advanced bots support cookies, allowing them to get around this detection vector
+ - More advanced bots support cookies, allowing them to get around this detection vector
+
+# JavaScript Support
+Javascript is a programming language that the majority of web browsers support. Most bots do not run JavaScript, as the resource cost of doing so would limit the amount of content that they can scrape.
+
+### Pros
+
+ - Protects against the vast majority of bots
+
+### Cons
+
+ - Tools such as [Selenium](https://www.selenium.dev) and [Puppeteer](https://pptr.dev) run JavaScript, allowing some bots to get around this detection vector.
+ - Privacy conscious individuals may have JavaScript disabled
