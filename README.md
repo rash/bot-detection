@@ -7,17 +7,17 @@ Bot detection has always been a cat and mouse game. Whether it's preventing bots
  - [Logic Checks](#logic-checks)
  - [Cookie Support](#cookie-support)
  - [JavaScript Support](#javascript-support)
- - Spoofing Detection
+ - [Spoofing Detection](#spoofing-detection)
  - Variable Detection
  - Input Analysis
 
 # User Agents
-A user agent is a header sent by the client to the server that allows the server to identify specific attributes about the client that sent the request. Some bots do not attempt to spoof this header and instead outright identify themselves, allowing for a simple detection vector.
+A user agent is a header sent by the client to the server that allows the server to identify specific attributes about the client that sent the request. Some bots do not attempt to spoof this header and instead outright identify themselves, allowing for a simple detection method.
 
 ### Pros
 
- - Nearly impossible for legitimate visitors to accidentally get detected by
  - Protects against amateur bots 
+ - Nearly impossible for legitimate visitors to accidentally get detected by
 
 ### Cons
 
@@ -29,23 +29,23 @@ Logic checks generally check the behaviour of visitors and check if they exceed 
 ### Pros
 
  - Imposes a limit on what bots can do
- - Forces bots to adapt if they desire to get around this detection vector
+ - Forces bots to adapt if they desire to get around this detection method
 
 ### Cons
 
  - Can accidentally be triggered by legitimate visitors if thresholds are too low
 
 # Cookie Support
-A cookie is data kept on a computer by a web browser that websites can view. Some bots do not support cookies, providing a detection vector.
+A cookie is data kept on a computer by a web browser that websites can view. Some bots do not support cookies, providing a detection method.
 
 ### Pros
 
- - Hard for legitimate visitors to accidentially trigger
  - Protects against basic bots
+ - Hard for legitimate visitors to accidentially trigger
  
 ### Cons
  
- - More advanced bots support cookies, allowing them to get around this detection vector
+ - More advanced bots support cookies, allowing them to get around this detection method
 
 # JavaScript Support
 Javascript is a programming language that the majority of web browsers support. Most bots do not run JavaScript, as the resource cost of doing so would limit the amount of content that they can scrape.
@@ -56,5 +56,18 @@ Javascript is a programming language that the majority of web browsers support. 
 
 ### Cons
 
- - Tools such as [Selenium](https://www.selenium.dev) and [Puppeteer](https://pptr.dev) run JavaScript, allowing some bots to get around this detection vector.
+ - Tools such as [Selenium](https://www.selenium.dev) and [Puppeteer](https://pptr.dev) run JavaScript, allowing some bots to get around this detection method
  - Privacy conscious individuals may have JavaScript disabled
+ 
+ # Spoofing Detection
+ In order to get around the [User Agents](#user-agents) detection method, most bots change their user agent to one of a real web browser. This can be detected in many ways, such as checking for support for browser specific features and the order in which headers are sent.
+ 
+### Pros
+
+ - Generally reveals the true identity of a bot
+ 
+### Cons
+
+ - Headless browsers will generally get around this detection method
+ - Privacy conscious users may spoof their user agent
+ - Details used to determine the true identity of a bot can change over time, which could cause problems down the line
